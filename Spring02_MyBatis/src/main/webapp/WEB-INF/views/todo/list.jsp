@@ -28,7 +28,7 @@
 					<td>${tmp.content }</td>
 					<td>${tmp.regdate }</td>
 					<td><a href="updateform.do?num=${tmp.num }">수정</a></td>
-					<td><a href="deletd.do?num=${tmp.num }">삭제</a></td>
+					<td><a href="delete.do?num=${tmp.num }">삭제</a></td>
 				</tr>
 			</c:forEach>
 		</tbody>

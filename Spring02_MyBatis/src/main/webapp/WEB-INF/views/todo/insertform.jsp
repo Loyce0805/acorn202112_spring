@@ -15,7 +15,7 @@
 			<input type="text" name="content" id="content" />
 		</div>
 		<div>
-			<label for="regdate">주소</label>
+			<label for="regdate">날짜</label>
 			<input type="text" name="regdate" id="regdate" />
 		</div>
 		<button type="submit">추가</button>

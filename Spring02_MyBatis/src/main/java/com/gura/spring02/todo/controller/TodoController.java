@@ -1,7 +1,5 @@
 package com.gura.spring02.todo.controller;
 
-import javax.xml.ws.Service;
-
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -17,7 +15,7 @@ public class TodoController {
 	private TodoService service;
 	
 	//할일 정보 수정 요청 처리
-	@RequestMapping("todo/update")
+	@RequestMapping("/todo/update")
 	public String update(TodoDto dto) {
 		service.updateTodo(dto);
 		return "todo/update";

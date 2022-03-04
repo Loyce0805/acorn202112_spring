@@ -1,5 +1,7 @@
 package com.gura.spring02.todo.service;
 
+import java.util.List;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.web.servlet.ModelAndView;
@@ -21,25 +23,27 @@ public class TodoServiceImpl implements TodoService{
 
 	@Override
 	public void updateTodo(TodoDto dto) {
-		// TODO Auto-generated method stub
+		dao.update(dto);
 		
 	}
 
 	@Override
 	public void deleteTodo(int num) {
-		// TODO Auto-generated method stub
+		dao.delete(num);
 		
 	}
 
 	@Override
 	public void getTodo(int num, ModelAndView mView) {
-		// TODO Auto-generated method stub
+		TodoDto dto=dao.getData(num);
+		mView.addObject("dto", dto);
 		
 	}
 
 	@Override
 	public void getListTodo(ModelAndView mView) {
-		// TODO Auto-generated method stub
+		List<TodoDto> list=dao.getList();
+		mView.addObject("list", list);
 		
 	}
 	

@@ -7,4 +7,27 @@
 		ORDER BY num ASC
 	</select>
 	
+	<insert id="insert" parameterType="com.gura.spring02.todo.dto.TodoDto">
+		INSERT INTO todo
+		(num, content, regdate)
+		VALUES(todo_seq.NEXTVAL, #{content}, #{sysdate})
+	</insert>
+	
+	<delete id="delete" parameterType="int">
+		DELETE FROM todo
+		WHERE num=#{num}
+	</delete>
+	
+	<select id="getData" parameterType="int"
+		resultType="com.gura.spring02.todo.dto.TodoDto">
+		SELECT num,content,regdate
+		FROM todo
+		WHERE num=#{num}
+	</select>
+	
+	<update id="update" parameterType="com.gura.spring02.todo.dto.TodoDto">
+		UPDATE todo
+		SET content=#{content}
+		WHERE num=#{num} 
+	</update>
 </mapper>
