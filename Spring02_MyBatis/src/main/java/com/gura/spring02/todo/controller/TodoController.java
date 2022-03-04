@@ -27,7 +27,7 @@ public class TodoController {
 		
 		service.getTodo(num, mView);
 		
-		mView.setViewName("member/updateform");
+		mView.setViewName("todo/updateform");
 		return mView;
 	}
 	

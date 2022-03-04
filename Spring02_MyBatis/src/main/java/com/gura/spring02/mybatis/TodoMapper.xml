@@ -10,7 +10,7 @@
 	<insert id="insert" parameterType="com.gura.spring02.todo.dto.TodoDto">
 		INSERT INTO todo
 		(num, content, regdate)
-		VALUES(todo_seq.NEXTVAL, #{content}, #{sysdate})
+		VALUES(todo_seq.NEXTVAL, #{content}, SYSDATE)
 	</insert>
 	
 	<delete id="delete" parameterType="int">

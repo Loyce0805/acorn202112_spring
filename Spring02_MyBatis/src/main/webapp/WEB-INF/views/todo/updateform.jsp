@@ -17,11 +17,11 @@
 		</div>
 		<div>
 			<label for="content">할일</label>
-			<input type="text" name="content" id="content" value="${param.content }" />
+			<input type="text" name="content" id="content" value="${dto.content }" />
 		</div>
 		<div>
 			<label for="regdate">날짜</label>
-			<input type="text" name="regdate" id="regdate" value="${param.regdate }" />
+			<input type="text" name="regdate" id="regdate" value="${dto.regdate }" />
 		</div>
 		
 		<button type="submit">수정 확인</button>
